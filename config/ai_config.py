@@ -1,6 +1,12 @@
 import requests
+import os
+import requests
+from dotenv import load_dotenv
 
-API_KEY = "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"
+# Load environment variables from .env file
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
 BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 HEADERS = {
